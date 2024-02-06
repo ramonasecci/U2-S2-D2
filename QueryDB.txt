@@ -1,0 +1,123 @@
+
+1)
+SELECT *
+  FROM [dbo].[Products]
+2)
+SELECT [ProductID]
+      ,[ProductName]
+      ,[SupplierID]
+      ,[CategoryID]
+      ,[QuantityPerUnit]
+      ,[UnitPrice]
+      ,[UnitsInStock]
+      ,[UnitsOnOrder]
+      ,[ReorderLevel]
+      ,[Discontinued]
+  FROM [dbo].[Products]
+  where UnitsInStock >= 40SELECT [ProductID]
+ 
+3)SELECT [EmployeeID]
+      ,[LastName]
+      ,[FirstName]
+      ,[Title]
+      ,[TitleOfCourtesy]
+      ,[BirthDate]
+      ,[HireDate]
+      ,[Address]
+      ,[City]
+      ,[Region]
+      ,[PostalCode]
+      ,[Country]
+      ,[HomePhone]
+      ,[Extension]
+      ,[Photo]
+      ,[Notes]
+      ,[ReportsTo]
+      ,[PhotoPath]
+  FROM [dbo].[Employees]
+  where City='London'
+
+4)
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+  order by Freight desc
+5)
+
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+  where Freight>90 and Freight<200
+
+6)
+
+SELECT [ProductID]
+      ,[ProductName]
+      ,[SupplierID]
+      ,[CategoryID]
+      ,[QuantityPerUnit]
+      ,[UnitPrice]
+      ,[UnitsInStock]
+      ,[UnitsOnOrder]
+      ,[ReorderLevel]
+      ,[Discontinued]
+  FROM [dbo].[Products]
+  where CategoryID=1
+
+7)
+
+
+SELECT [OrderID]
+      ,[ProductID]
+      ,[UnitPrice]
+      ,[Quantity]
+      ,[Discount]
+  FROM [dbo].[Order Details]
+
+  where Discount>0
+
+
+8)
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+  where CustomerID='BOTTM' and Freight>50
